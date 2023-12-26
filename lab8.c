@@ -6,4 +6,5 @@ int stack_overflow(){
 }
 int main(){
 	printf("%d",stack_overflow());
+	return 0;
 }
