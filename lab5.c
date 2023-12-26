@@ -5,7 +5,7 @@ double pol(double a,double b, double c, double x){
 }
 
 int main(){
-	double a,b,c,x,t0,t1,t2,d10,d21,d2,j,k,t;
+	double a,b,c,x,t0,t1,t2,d10,d21,d2,j,t;
 	printf("Введите коэфициенты полинома \n");
 	scanf("%lf %lf %lf",&a,&b,&c);
 	t0=pol(a,b,c,0);
