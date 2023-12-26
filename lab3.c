@@ -9,4 +9,5 @@ int main(){
 		printf("число %d четное\n",x);
 	else
 		printf("число %d нечетное\n",x);
+	return 0;
 }
