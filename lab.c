@@ -9,4 +9,5 @@ int main(){
 		float res=polinom(i);
 		printf("%f\n",res);
 	}
+	return 0;
 }
