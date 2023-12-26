@@ -1,34 +1,31 @@
 #include <stdio.h>
 #include <math.h>
-
-double calcpol(double a, double b, double c, double x) {
-	return (a * pow(x, 2)) + (b * x) + c;
+double pol(double a,double b, double c, double x){
+	return a*pow(x,2)+b*x+c;
 }
 
-int main() {
-	double a, b, c;
-	printf("Введите значения параметров a, b и c: ");
-	scanf("%lf %lf %lf", &a, &b, &c);
-
-	double t0 = calcpol(a, b, c, 0);
-	double t1 = calcpol(a, b, c, 1);
-	double t2 = calcpol(a, b, c, 2);
-
-	double delta10 = t1 - t0;
-	double delta21 = t2 - t1;
-	double delta2 = delta21 - delta10;
-
-	printf("T(0) = %.2lf\n", t0);
-	printf("T(1) = %.2lf\n", t1);
-	printf("T(2) = %.2lf\n", t2);
-	printf("Δ_1,0 = %.2lf\n", delta10);
-	printf("Δ_2,1 = %.2lf\n", delta21);
-	printf("Δ^2 = %.2lf\n", delta2);
-
-	int x;
-	for (x = 3; x <= 100; x++) {
-		double t = t2 + delta21 * (x - 2) + delta2 * (x - 2) * (x - 1)/2;
-		printf("T(%d) = %.2lf\n", x, t);
+int main(){
+	double a,b,c,x,t0,t1,t2,d10,d21,d2,j,k,t;
+	printf("Введите коэфициенты полинома \n");
+	scanf("%lf %lf %lf",&a,&b,&c);
+	t0=pol(a,b,c,0);
+	t1=pol(a,b,c,1);
+	t2=pol(a,b,c,2);
+	printf("T(0)=%lf\n",t0);
+	printf("T(1)=%lf\n",t1);
+	printf("T(2)=%lf\n",t2);
+	d10=t1-t0;
+	d21=t2-t1;
+	d2=d21-d10;
+	printf("delta10=%lf\n",d10);
+	printf("delta21=%lf\n",d21);
+	printf("delta2=%lf\n",d2);
+	j=d21;
+	t=t2;
+	for (int i=3;i<=100;i++){
+		j+=d2;
+		t+=j;
+		printf("T(%d)=%lf\n",i,t);
 	}
-	return 0;
 }
+
