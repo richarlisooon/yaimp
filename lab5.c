@@ -27,5 +27,6 @@ int main(){
 		t+=j;
 		printf("T(%d)=%lf\n",i,t);
 	}
+	return 0;
 }
 
