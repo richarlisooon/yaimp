@@ -20,7 +20,12 @@ int main(){
 		printf("Уравнение имеет 1 корень равный %lf\n",b/c);
 	}
 	else if (b==0){
-		printf("Уравнение имеет 2 корня x1=%lf,x2=%lf\n",c,-c);
+		if (-c/a>0){
+			printf("Уравнение имеет 2 корня x1=%lf x2=%lf\n",sqrt(-c/a),+sqrt(-c/a));
+		}
+		else {
+			printf("Уравнение имеет 2 корня x1=%lfi x2=%lfi\n",sqrt(c/a),+sqrt(c/a));
+		}
 	}
 	else if (c==0){
 		printf("Уравнение имеет 2 корня x1=0 x2=%lf\n",-b/a);
