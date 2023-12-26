@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <math.h>
-long int fact(int n){
-	if (n==1)
+long int fact(int a){
+	if (a==1)
 		return 1;
-	if (n>1)
-		return n*fact(n-1);
+	if (a>1)
+		return a*fact(a-1);
 }
 int main(){
 	int a;
