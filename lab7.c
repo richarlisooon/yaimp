@@ -17,4 +17,5 @@ int main(){
 	printf("Введите второе число\n");
         scanf("%d",&b);
 	printf("%d\n",sumcheck(a,b));
+	return 0;
 }
